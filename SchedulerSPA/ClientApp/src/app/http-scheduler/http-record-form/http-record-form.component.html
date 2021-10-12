@@ -1,0 +1,50 @@
+<div>
+    <form [formGroup]="recordForm">
+        <section class="u-background-brightest p-5">
+            <h2 class="mb-4">Modify Record</h2>
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group" [ngClass]="{'has-error':!recordForm.controls['method'].valid && recordForm.controls['method'].touched}">
+                        <label>Method</label>
+                        <select formControlName="method" class="custom-select form-control">
+                            <option *ngFor="let method of httpMethods | keyvalue; let i = index;" [value]="method.value">{{ method.value }}</option>
+                          </select>
+                        <div *ngIf="recordForm.controls['method'].hasError('required') && recordForm.controls['method'].touched" class="alert alert-danger">Required field.</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group" [ngClass]="{'has-error':!recordForm.controls['uri'].valid && recordForm.controls['uri'].touched}">
+                        <label>URI</label>
+                        <input formControlName="uri" class="form-control form-input w-100 u-maxwidth-unset" type="text" placeholder="URI">
+                        <div *ngIf="recordForm.controls['uri'].hasError('required') && recordForm.controls['uri'].touched" class="alert alert-danger">Required field.</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group" [ngClass]="{'has-error':!recordForm.controls['token'].valid && recordForm.controls['token'].touched}">
+                        <label>Token</label>
+                        <input formControlName="token" class="form-control form-input w-100 u-maxwidth-unset" type="text" placeholder="Token">
+                        <div *ngIf="recordForm.controls['token'].hasError('required') && recordForm.controls['token'].touched" class="alert alert-danger">Required field.</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group" [ngClass]="{'has-error':!recordForm.controls['body'].valid && recordForm.controls['body'].touched}">
+                        <label>Body</label>
+                        <input formControlName="body" class="form-control form-input w-100 u-maxwidth-unset" type="text" placeholder="Body">
+                        <div *ngIf="recordForm.controls['body'].hasError('required') && recordForm.controls['body'].touched" class="alert alert-danger">Required field.</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group" [ngClass]="{'has-error':!recordForm.controls['time'].valid && recordForm.controls['time'].touched}">
+                        <label>Time</label>
+                        <input formControlName="time" class="form-control form-input w-100 u-maxwidth-unset" type="datetime-local">
+                        <div *ngIf="recordForm.controls['time'].hasError('required') && recordForm.controls['time'].touched" class="alert alert-danger">Required field.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="d-flex justify-content-end align-items-center">
+            <button class="btn btn-danger ml-3" *ngIf="isEdit" type="button" (click)="delete()">Delete</button>
+            <button class="btn btn-primary ml-3" [disabled]="!recordForm.valid" type="button" (click)="submit()">{{ isEdit ? "Edit" : "Add Record" }}</button>
+        </div>
+    </form>
+</div>

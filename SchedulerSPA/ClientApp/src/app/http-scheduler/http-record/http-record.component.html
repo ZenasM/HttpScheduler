@@ -1,0 +1,32 @@
+<section class="u-background-brightest p-5">
+    <h2 class="mb-4">Http Records</h2>
+    <p *ngIf="!httpRecords"><em>Loading...</em></p>
+    <table
+        class="table table-striped"
+        aria-labelledby="tableLabel"
+        *ngIf="httpRecords"
+    >
+        <thead>
+            <tr>
+                <th>RecordId</th>
+                <th>Time</th>
+                <th>Method</th>
+                <th>URI</th>
+                <th>Token</th>
+                <th>Body</th>
+                <th>Completed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let httpRecord of httpRecords" [routerLink]="['/scheduler', { outlets: { scheduler: ['record', httpRecord.httpRecordId] } }]">
+                <td>{{ httpRecord.httpRecordId }}</td>
+                <td>{{ httpRecord.time }}</td>
+                <td>{{ httpRecord.method }}</td>
+                <td>{{ httpRecord.uri }}</td>
+                <td>{{ httpRecord.token }}</td>
+                <td>{{ httpRecord.body }}</td>
+                <td>{{ httpRecord.completed }}</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

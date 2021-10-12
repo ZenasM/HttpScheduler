@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+    schedulerUrl: "https://localhost:44337",
+    production: false,
 };
 
 /*

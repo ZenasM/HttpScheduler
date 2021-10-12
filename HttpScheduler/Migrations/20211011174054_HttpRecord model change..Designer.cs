@@ -4,14 +4,16 @@ using HttpScheduler.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace SchedulerApi.Migrations
 {
     [DbContext(typeof(RecordContext))]
-    partial class RecordContextModelSnapshot : ModelSnapshot
+    [Migration("20211011174054_HttpRecord model change.")]
+    partial class HttpRecordmodelchange
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

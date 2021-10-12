@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
-import { ConfigurationService } from './services/configuration.service';
+import { Component } from "@angular/core";
+import { ConfigurationService } from "./shared/services/configuration.service";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html'
+  selector: "app-root",
+  templateUrl: "./app.component.html"
 })
 export class AppComponent {
-  title = 'app';
+  title = "app";
 
-  constructor(private configurationService: ConfigurationService) { }
-
+  constructor() { }
+  // TODO: Should we init ConfigService here?
 }
