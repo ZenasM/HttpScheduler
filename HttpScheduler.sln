@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchedulerApi", "HttpScheduler\SchedulerApi.csproj", "{4BE77BE7-888E-4970-B6D2-42E1417677F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchedulerSPA", "SchedulerSPA\SchedulerSPA.csproj", "{9E3F7A9A-E623-4833-AFB5-1A4BC7C645B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchedulerSPA", "SchedulerSPA\SchedulerSPA.csproj", "{9E3F7A9A-E623-4833-AFB5-1A4BC7C645B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpExecutor", "HttpExecutor\HttpExecutor.csproj", "{44D67E10-D3DD-4C36-9593-7B3046002F6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9E3F7A9A-E623-4833-AFB5-1A4BC7C645B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E3F7A9A-E623-4833-AFB5-1A4BC7C645B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E3F7A9A-E623-4833-AFB5-1A4BC7C645B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44D67E10-D3DD-4C36-9593-7B3046002F6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D67E10-D3DD-4C36-9593-7B3046002F6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D67E10-D3DD-4C36-9593-7B3046002F6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D67E10-D3DD-4C36-9593-7B3046002F6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

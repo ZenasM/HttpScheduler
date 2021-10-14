@@ -22,6 +22,15 @@ namespace SchedulerApi.Controllers
         }
 
         // GET: api/HttpRecords
+        [HttpGet("action")]
+        public async Task<ActionResult<IEnumerable<HttpRecord>>> GetActionableHttpRecords()
+        {
+            return await _context.HttpRecords
+                .Where((r) => !r.Completed && r.Time < DateTimeOffset.Now.AddSeconds(10))
+                .ToListAsync();
+        }
+
+        // GET: api/HttpRecords
         [HttpGet]
         public async Task<ActionResult<IEnumerable<HttpRecord>>> GetHttpRecords()
         {
