@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SchedulerSPA.Controllers
+namespace SchedulerSpa.Controllers
 {
     public class HomeController : Controller
     {

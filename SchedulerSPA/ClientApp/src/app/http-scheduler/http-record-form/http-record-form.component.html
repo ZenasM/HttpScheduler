@@ -1,7 +1,7 @@
 <div>
     <form [formGroup]="recordForm">
         <section class="u-background-brightest p-5">
-            <h2 class="mb-4">Modify Record</h2>
+            <h2 class="mb-4">{{ isEdit ? "Edit" : "Add" }} Record</h2>
             <div class="row">
                 <div class="col-6">
                     <div class="form-group" [ngClass]="{'has-error':!recordForm.controls['method'].valid && recordForm.controls['method'].touched}">
